@@ -1,0 +1,77 @@
+figure.image_spin_button {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  perspective: 50em;
+}
+
+figure.image_spin_button * {
+  box-sizing: padding-box;
+  transition: all 0.2s ease-out;
+}
+
+figure.image_spin_button img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+figure.image_spin_button figcaption {
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+figure.image_spin_button h2, figure.image_spin_button h4 {
+  margin: 0;
+}
+
+figure.image_spin_button h2 {
+  font-weight: 600;
+}
+
+figure.image_spin_button:after {
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  transition: all 0.4s ease-in-out;
+  transform: rotateX(-90deg);
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+
+figure.image_spin_button a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+figure.image_spin_button:hover figcaption, figure.image_spin_button.hover figcaption {
+  transform: translateY(-50%);
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+figure.image_spin_button:hover:after, figure.image_spin_button.hover:after {
+  transform: rotateX(0);
+  opacity: 0.9;
+}
+
